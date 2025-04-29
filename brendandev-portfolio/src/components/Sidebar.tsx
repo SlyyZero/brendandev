@@ -5,7 +5,7 @@ import {Github, Linkedin } from 'lucide-react';
 
 export default function Sidebar() {
   return (
-    <aside className="fixed top-0 left-0 h-full w-64 bg-gray-900 text-white p-8 flex flex-col justify-between">
+    <aside className="w-full md:w-64 md:fixed top-0 left-0 md:h-full h-auto bg-gray-900 text-white p-8 flex flex-col md:justify-between">
       {/* Top: Name + Nav */}
       <div>
         <h1 className="text-2xl font-bold mb-8">Brendan Jonsson</h1>
