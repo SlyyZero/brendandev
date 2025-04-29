@@ -10,27 +10,27 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   const closeSidebar = () => setIsSidebarOpen(false);
 
   return (
-    <div className="relative flex flex-col md:flex-row min-h-screen">
+    <div className="relative min-h-screen flex flex-col md:flex-row overflow-x-hidden">
       {/* Mobile Hamburger Button */}
       <div className="fixed top-4 left-4 z-50 md:hidden">
         <MobileNavToggle onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
       </div>
 
       {/* Sidebar */}
-      <div className="z-40">
-        <Sidebar isOpen={isSidebarOpen} />
-      </div>
+      <Sidebar isOpen={isSidebarOpen} />
 
-      {/* Overlay to detect clicks outside */}
+      {/* Black semi-transparent overlay */}
       {isSidebarOpen && (
         <div
           onClick={closeSidebar}
-          className="fixed inset-0 bg-black bg-opacity-30 md:hidden z-30"
+          className="fixed inset-0 bg-black bg-opacity-40 md:hidden z-30"
         ></div>
       )}
 
       {/* Main Content */}
-      <main className="flex-1 p-8 z-20">{children}</main>
+      <main className="flex-1 p-8 z-20">
+        {children}
+      </main>
     </div>
   );
 }
