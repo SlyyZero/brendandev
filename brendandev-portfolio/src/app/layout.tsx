@@ -1,11 +1,7 @@
-'use client';
-
-import { useState } from 'react';
-import Sidebar from '@/components/Sidebar';
-import MobileNavToggle from '@/components/MobileNavToggle';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Shell from '@/components/Shell';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,16 +23,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col md:flex-row`}>
-        <MobileNavToggle onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
-        <Sidebar isOpen={isSidebarOpen} />
-        <main className="flex-1 p-8">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Shell>
           {children}
-        </main>
+        </Shell>
       </body>
     </html>
   );
