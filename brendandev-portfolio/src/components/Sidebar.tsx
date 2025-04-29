@@ -9,7 +9,8 @@ export default function Sidebar({ isOpen }: { isOpen: boolean }) {
   transform transition-transform duration-300 ease-in-out
   ${isOpen ? 'translate-x-0' : '-translate-x-full'}
   z-40
-  md:relative md:translate-x-0 md:h-auto`}>
+  md:relative md:translate-x-0 md:h-auto
+`}>
       <div>
         <h1 className="text-2xl font-bold mb-8">Brendan Jonsson</h1>
         <nav className="flex flex-col space-y-4 text-sm">
