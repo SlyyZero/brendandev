@@ -12,10 +12,14 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative flex flex-col md:flex-row min-h-screen">
       {/* Mobile Hamburger Button */}
-      <MobileNavToggle onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
+      <div className="fixed top-4 left-4 z-50 md:hidden">
+        <MobileNavToggle onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
+      </div>
 
       {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} />
+      <div className="z-40">
+        <Sidebar isOpen={isSidebarOpen} />
+      </div>
 
       {/* Overlay to detect clicks outside */}
       {isSidebarOpen && (
