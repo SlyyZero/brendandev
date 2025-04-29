@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import {Github, Linkedin } from 'lucide-react';
 
 export default function Sidebar() {
   return (
@@ -18,8 +19,12 @@ export default function Sidebar() {
 
       {/* Bottom: Socials (Optional) */}
       <div className="flex space-x-4 mt-8 text-xl">
-        <a href="https://github.com/SlyyZero" target="_blank" rel="noopener noreferrer">GH</a>
-        <a href="https://linkedin.com/in/brendanjonsson" target="_blank" rel="noopener noreferrer">TEST</a>
+        <a href="https://github.com/SlyyZero" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+        <Github size={28}/>
+        </a>
+        <a href="https://linkedin.com/in/brendanjonsson" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+          <Linkedin size={28}/>
+        </a>
         {/* Use icons here (Heroicons, Lucide, etc.) if desired */}
       </div>
     </aside>
