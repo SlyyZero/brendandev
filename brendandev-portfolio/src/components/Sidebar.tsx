@@ -1,12 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import {Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen }: { isOpen: boolean }) {
   return (
-    <aside className="w-full p-4 md:w-64 md:fixed md:h-full bg-gray-900 text-white flex flex-col md:justify-between">
-      {/* Top: Name + Nav */}
+    <aside
+      className={`fixed top-0 left-0 h-full w-64 bg-gray-900 text-white p-8 flex flex-col justify-between
+      transform transition-transform duration-300 ease-in-out
+      ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+      md:translate-x-0 md:relative md:top-0 md:left-0 md:w-64 md:h-screen`}
+    >
       <div>
         <h1 className="text-2xl font-bold mb-8">Brendan Jonsson</h1>
         <nav className="flex flex-col space-y-4 text-sm">
@@ -17,15 +21,13 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      {/* Bottom: Socials (Optional) */}
       <div className="flex space-x-4 mt-8 text-xl">
         <a href="https://github.com/SlyyZero" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
-        <Github size={28}/>
+          <Github size={28} />
         </a>
         <a href="https://linkedin.com/in/brendanjonsson" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
-          <Linkedin size={28}/>
+          <Linkedin size={28} />
         </a>
-        {/* Use icons here (Heroicons, Lucide, etc.) if desired */}
       </div>
     </aside>
   );
