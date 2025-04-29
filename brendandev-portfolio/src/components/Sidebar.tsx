@@ -8,8 +8,8 @@ export default function Sidebar({ isOpen }: { isOpen: boolean }) {
 <aside className={`fixed top-0 left-0 h-full w-64 bg-gray-900 text-white p-8 flex flex-col justify-between
   transform transition-transform duration-300 ease-in-out
   ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-  z-40 md:translate-x-0 md:relative md:h-full`}
->
+  z-40
+  md:translate-x-0 md:relative md:h-full`}>
 
       <div>
         <h1 className="text-2xl font-bold mb-8">Brendan Jonsson</h1>

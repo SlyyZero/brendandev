@@ -11,17 +11,15 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative min-h-screen flex flex-col md:flex-row overflow-x-hidden">
       
-      {/* Hamburger (top-left, always visible on mobile) */}
+      {/* Hamburger Button */}
       <div className="fixed top-4 left-4 z-50 md:hidden">
         <MobileNavToggle onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
       </div>
 
-      {/* Sidebar (mobile = slide-in, desktop = pinned) */}
-      <div className="z-40">
-        <Sidebar isOpen={isSidebarOpen} />
-      </div>
+      {/* Sidebar - directly placed */}
+      <Sidebar isOpen={isSidebarOpen} />
 
-      {/* Dark overlay when sidebar is open (click to close) */}
+      {/* Overlay (only visible on mobile) */}
       {isSidebarOpen && (
         <div
           onClick={closeSidebar}
