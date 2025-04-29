@@ -1,0 +1,52 @@
+# BrendanDev Portfolio – Project TODO
+
+## 1. Core Site Features (MVP)
+
+- [ ] Build "About Me" page (background, education, interests)
+- [ ] Build "Projects" page (featured projects with links and descriptions)
+- [ ] Build "Experience" page (professional roles and skills)
+- [ ] Build "Contact" section (email link or simple contact form)
+
+---
+
+## 2. Visual and Layout Improvements
+
+- [ ] Fix Sidebar mobile responsiveness (flex stacking, spacing)
+- [ ] Implement mobile-optimized Sidebar (optional hamburger menu)
+- [ ] Add GitHub and LinkedIn icons (already implemented)
+
+---
+
+## 3. SEO and Performance
+
+- [ ] Add page `<title>` and `<meta description>` tags
+- [ ] Add Open Graph tags for social media previews
+- [ ] Optimize favicon and social preview images
+- [ ] Improve Lighthouse scores (Performance / Accessibility)
+
+---
+
+## 4. UX/UI Enhancements
+
+- [ ] Implement smooth scroll behavior for anchor links
+- [ ] Add scroll-to-top button
+- [ ] Animate Sidebar open/close (using Framer Motion)
+- [ ] Improve mobile UX (e.g., collapse Sidebar after link click)
+
+---
+
+## 5. Production Deployment and Analytics
+
+- [ ] Link custom domain (`brendandev.com`) through Vercel
+- [ ] Set up Google Analytics for site traffic tracking
+- [ ] Configure canonical URLs for SEO
+
+---
+
+## 6. Long-term Enhancements
+
+- [ ] Add blog (Markdown or headless CMS)
+- [ ] Implement dark mode toggle
+- [ ] Add page transition animations between route changes
+- [ ] Set up deployment preview branches for staging
+- [ ] Regularly update SEO metadata and project listings
