@@ -19,7 +19,7 @@ export default function Sidebar() {
       {/* Bottom: Socials (Optional) */}
       <div className="flex space-x-4 mt-8 text-xl">
         <a href="https://github.com/SlyyZero" target="_blank" rel="noopener noreferrer">GH</a>
-        <a href="https://linkedin.com/in/brendanjonsson" target="_blank" rel="noopener noreferrer">LI</a>
+        <a href="https://linkedin.com/in/brendanjonsson" target="_blank" rel="noopener noreferrer">TEST</a>
         {/* Use icons here (Heroicons, Lucide, etc.) if desired */}
       </div>
     </aside>
