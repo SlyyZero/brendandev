@@ -11,9 +11,11 @@
 
 ## 2. Visual and Layout Improvements
 
-- [ ] Fix Sidebar mobile responsiveness (flex stacking, spacing)
-- [ ] Implement mobile-optimized Sidebar (optional hamburger menu)
-- [ ] Add GitHub and LinkedIn icons (already implemented)
+- [ ] Finalize Sidebar mobile responsiveness
+- [ ] Fix Sidebar z-index and layering during open (mobile polish)
+- [ ] Improve mobile overlay behavior (fade-in transition, optional lock scroll)
+- [x] Add GitHub and LinkedIn icons
+- [x] Implement hamburger menu toggle for Sidebar
 
 ---
 
@@ -28,25 +30,25 @@
 
 ## 4. UX/UI Enhancements
 
-- [ ] Implement smooth scroll behavior for anchor links
+- [ ] Smooth scroll behavior for anchor links
 - [ ] Add scroll-to-top button
-- [ ] Animate Sidebar open/close (using Framer Motion)
-- [ ] Improve mobile UX (e.g., collapse Sidebar after link click)
+- [ ] Animate Sidebar open/close (Framer Motion optional)
+- [ ] Improve mobile UX (collapse sidebar after nav click)
 
 ---
 
 ## 5. Production Deployment and Analytics
 
 - [ ] Link custom domain (`brendandev.com`) through Vercel
-- [ ] Set up Google Analytics for site traffic tracking
+- [ ] Set up Google Analytics for traffic tracking
 - [ ] Configure canonical URLs for SEO
 
 ---
 
 ## 6. Long-term Enhancements
 
-- [ ] Add blog (Markdown or headless CMS)
+- [ ] Add blog (Markdown or CMS-powered)
 - [ ] Implement dark mode toggle
 - [ ] Add page transition animations between route changes
 - [ ] Set up deployment preview branches for staging
-- [ ] Regularly update SEO metadata and project listings
+- [ ] Periodic SEO/content updates
