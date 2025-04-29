@@ -10,16 +10,16 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   const closeSidebar = () => setIsSidebarOpen(false);
 
   return (
-    <div className="relative min-h-screen flex flex-col md:flex-row overflow-x-hidden">
-      {/* Mobile Hamburger Button */}
+    <div className="relative min-h-screen flex flex-col md:flex-row">
+      {/* Mobile Hamburger */}
       <div className="fixed top-4 left-4 z-50 md:hidden">
         <MobileNavToggle onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
       </div>
 
-      {/* Sidebar */}
+      {/* Sidebar — visible only on desktop */}
       <Sidebar isOpen={isSidebarOpen} />
 
-      {/* Black semi-transparent overlay */}
+      {/* Overlay for mobile */}
       {isSidebarOpen && (
         <div
           onClick={closeSidebar}
@@ -27,8 +27,8 @@ export default function Shell({ children }: { children: React.ReactNode }) {
         ></div>
       )}
 
-      {/* Main Content */}
-      <main className="flex-1 p-8 z-20">
+      {/* Main Content Area */}
+      <main className="flex-1 p-8 md:ml-64">
         {children}
       </main>
     </div>

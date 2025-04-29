@@ -5,12 +5,7 @@ import { Github, Linkedin } from 'lucide-react';
 
 export default function Sidebar({ isOpen }: { isOpen: boolean }) {
   return (
-<aside className={`w-full md:w-64 bg-gray-900 text-white p-8 flex flex-col justify-between
-  transform transition-transform duration-300 ease-in-out
-  ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-  z-40
-  md:relative md:translate-x-0 md:h-auto
-`}>
+<aside className={`hidden md:flex fixed top-0 left-0 h-full w-64 bg-gray-900 text-white p-8 flex-col justify-between z-40`}>
       <div>
         <h1 className="text-2xl font-bold mb-8">Brendan Jonsson</h1>
         <nav className="flex flex-col space-y-4 text-sm">
